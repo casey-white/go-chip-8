@@ -1,4 +1,4 @@
-module github.com/casey-white/go-chip-8
+module go-chip-8
 
 go 1.20
 
