@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
-	"go-chip-8/memory"
+	"go-chip-8/cpu"
 )
 
 func main() {
-	mem := memory.NewMemory("roms/pong.ch8")
-	fmt.Println(mem)
+	new_cpu := cpu.NewCPU("roms/pong.ch8")
+	fmt.Println(new_cpu.Mem)
+	cpu.Reset(new_cpu)
+	fmt.Println(new_cpu.Mem)
 	// if err := sdl.Init(sdl.INIT_EVERYTHING); err != nil {
 	// 	panic(err)
 	// }

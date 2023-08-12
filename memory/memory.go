@@ -38,7 +38,7 @@ func LoadFont(memory Memory) Memory {
 	}
 
 	for i := 0; i < 80; i++ {
-		memory[0x50] = font[i]
+		memory[0x50+i] = font[i]
 	}
 
 	return memory
